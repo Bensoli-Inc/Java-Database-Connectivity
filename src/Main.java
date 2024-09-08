@@ -22,11 +22,20 @@ public class Main
         String url = dotenv.get("DB_URL");
         String username = "root";
         String password =dotenv.get("DB_PASSWORD");
+        String query = "SELECT studentName FROM students WHERE admissionNo = 1002";
 
-        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = getConnection(url, username, password);
         Statement st = con.createStatement();
+        ResultSet rs = st.executeQuery(query);
 
+        rs.next();
+        String name = rs.getString("studentName");
 
+        System.out.println(name);
+
+        //closing
+        st.close();
+        con.close();
     }
 }
