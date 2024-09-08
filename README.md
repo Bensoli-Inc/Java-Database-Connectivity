@@ -18,10 +18,11 @@ displaying the contents of the table >> select * from student;
 
 DIFFERENT SQL LANGUAGES
 
-DDL >> data definition language eg create table
+DDL >> data definition language eg create, truncate, drop
 
-dml >> data manipulation language eg insert, 
+dml >> data manipulation language eg insert, delete
 
 dql >> data query language eg select * from
 
-TCL >> transaction control language eg in ecommerce website
+TCL >> transaction control language eg in ecommerce website 
+has commit and rollback statements
