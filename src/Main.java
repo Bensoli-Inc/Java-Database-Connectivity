@@ -11,17 +11,22 @@
 import java.sql.*;
 
 import static java.sql.DriverManager.getConnection;
+import io.github.cdimascio.dotenv.Dotenv;
 
 public class Main
 {
     public static void main(String[] args) throws Exception
     {
-        String url = "";
-        String username = "";
-        String password ="";
+        Dotenv dotenv = Dotenv.load();
+
+        String url = dotenv.get("DB_URL");
+        String username = "root";
+        String password =dotenv.get("DB_PASSWORD");
 
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = getConnection(url, username, password);
-        Statement str;
+        Statement st = con.createStatement();
+
+
     }
 }
