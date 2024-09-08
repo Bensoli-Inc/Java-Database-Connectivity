@@ -12,7 +12,7 @@ public class Update
         String url = dotenv.get("DB_URL");
         String username = "root";
         String password =dotenv.get("DB_PASSWORD");
-        String query = "INSERT INTO students values (1003, 'Ben', '2R', 376)";
+        String query = "INSERT INTO students values (1004, 'Kate', '4N', 392)";
 
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = getConnection(url, username, password);
