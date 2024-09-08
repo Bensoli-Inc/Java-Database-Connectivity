@@ -26,3 +26,17 @@ dql >> data query language eg select * from
 
 TCL >> transaction control language eg in ecommerce website 
 has commit and rollback statements
+
+AGGREGATE FUNCTIONS >> 
+
+count(*) >> to get total rows
+
+max(column name eg marks) >> maximum value
+ 
+min(column name)
+
+avg(column name) to get average
+
+sum(column name)
+
+ORDER BY clause for sequence
