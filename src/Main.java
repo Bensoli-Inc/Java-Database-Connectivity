@@ -22,17 +22,22 @@ public class Main
         String url = dotenv.get("DB_URL");
         String username = "root";
         String password =dotenv.get("DB_PASSWORD");
-        String query = "SELECT studentName FROM students WHERE admissionNo = 1002";
+        String query = "SELECT studentName FROM students WHERE admissionNo = 1001";
+        String query2 = "SELECT * FROM students";
 
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = getConnection(url, username, password);
         Statement st = con.createStatement();
-        ResultSet rs = st.executeQuery(query);
+        ResultSet rs = st.executeQuery(query2);
 
-        rs.next();
-        String name = rs.getString("studentName");
+        String userData = "";
 
-        System.out.println(name);
+        while(rs.next())
+        {
+            userData = rs.getInt(1) + " : " + rs.getString(2) + " : " + rs.getInt(3);
+            System.out.println(userData);
+        }
+
 
         //closing
         st.close();
