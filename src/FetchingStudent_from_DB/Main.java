@@ -1,4 +1,4 @@
-package benfxjdbc;
+package FetchingStudent_from_DB;
 import java.sql.*;
 import static java.sql.DriverManager.getConnection;
 import io.github.cdimascio.dotenv.Dotenv;
